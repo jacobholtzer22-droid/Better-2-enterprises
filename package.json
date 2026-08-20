@@ -1,0 +1,30 @@
+{
+  "name": "better2-enterprises-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "npm run images && next build",
+    "images": "node scripts/process-images.mjs",
+    "start": "next start",
+    "lint": "next lint",
+    "verify:schema": "node scripts/verify-schema.mjs",
+    "verify:html": "node scripts/verify-html.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.462.0",
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8",
+    "sharp": "^0.33.5",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5"
+  }
+}

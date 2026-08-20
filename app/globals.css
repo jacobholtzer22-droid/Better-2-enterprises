@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens — the only place raw hex values are allowed.
+   See docs/DESIGN-PLAN.md (Pass 2) for derivations and contrast checks. */
+:root {
+  --slab: #eeefeb; /* page base — cured slab */
+  --form: #dfe2dc; /* alt surfaces — stripped formwork */
+  --joint: #c2c7bf; /* hairline rules — control joints */
+  --aggregate: #545d56; /* secondary text — exposed aggregate */
+  --ink: #161d24; /* primary text / dark sections — structural navy */
+  --chalk: #1e5fa8; /* single accent — chalk-line blue */
+}
+
+html {
+  background-color: var(--slab);
+  color: var(--ink);
+}
