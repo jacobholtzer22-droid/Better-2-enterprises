@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design tokens — the only place raw hex values are allowed.
-   See docs/DESIGN-PLAN.md (Pass 2) for derivations and contrast checks. */
+/* ---------------------------------------------------------------------------
+   Design tokens — the only place raw hex values are allowed.
+   See docs/DESIGN-PLAN.md (Pass 2) for derivations and contrast checks.
+--------------------------------------------------------------------------- */
 :root {
   --slab: #eeefeb; /* page base — cured slab */
   --form: #dfe2dc; /* alt surfaces — stripped formwork */
@@ -20,4 +22,184 @@
 html {
   background-color: var(--slab);
   color: var(--ink);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Visible keyboard focus on every interactive element. */
+:focus-visible {
+  outline: 2px solid var(--chalk);
+  outline-offset: 2px;
+}
+.bg-ink :focus-visible {
+  outline-color: var(--chalk-lift);
+}
+
+::selection {
+  background: var(--chalk);
+  color: #fff;
+}
+
+/* ---------------------------------------------------------------------------
+   Control-joint line system (the signature element)
+--------------------------------------------------------------------------- */
+
+/* Full-width hairline joint between sections. */
+.joint-rule {
+  border-top: 1px solid var(--joint);
+}
+
+/* Saw-cut tick: short perpendicular mark at a joint, like crossing cuts in
+   real flatwork. Applied to section containers. */
+.saw-tick {
+  position: relative;
+}
+.saw-tick::before,
+.saw-tick::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 1px;
+  height: 16px;
+  background: var(--joint);
+}
+.saw-tick::before {
+  left: 1.5rem;
+}
+.saw-tick::after {
+  right: 1.5rem;
+}
+@media (min-width: 768px) {
+  .saw-tick::before {
+    left: 2.5rem;
+  }
+  .saw-tick::after {
+    right: 2.5rem;
+  }
+}
+
+/* Mono station-marker label above a section: "01 — SCOPE OF WORK". */
+.station {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--aggregate);
+}
+
+/* Wordmark accent glyph — chalk on light, lifted chalk on dark (raw chalk
+   fails contrast on --ink). */
+.wordmark-accent {
+  color: var(--chalk);
+}
+.bg-ink .wordmark-accent {
+  color: var(--chalk-lift);
+}
+
+/* The snapped chalk line (hero + emphasis rules). */
+.chalk-line {
+  height: 3px;
+  background: var(--chalk);
+  transform-origin: left center;
+}
+.bg-ink .chalk-line {
+  background: var(--chalk-lift);
+}
+
+/* ---------------------------------------------------------------------------
+   Motion layer
+   - Reveal: elements start hidden, settle on intersection (one observer).
+   - Transform/opacity only. Nothing animates twice.
+--------------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Page-load sequence (homepage): staged entrance, resolves < 900ms.
+   The H1 is NOT in this system — it paints immediately (LCP). */
+.load-fade {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: load-fade-in 0.45s ease-out forwards;
+}
+.load-snap {
+  transform: scaleX(0);
+  animation: load-snap-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes load-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes load-snap-in {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Hover micro-interactions: 150ms ease-out, transform/opacity only. */
+.hover-raise {
+  transition:
+    transform 0.15s ease-out,
+    opacity 0.15s ease-out;
+}
+@media (hover: hover) {
+  .hover-raise:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Ambient hero layer: the single allowed infinite animation — a slow drift
+   on the aggregate-grain texture. < 5% visual weight. */
+.ambient-drift {
+  animation: ambient-drift 60s linear infinite alternate;
+}
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-2.5%, -1.5%, 0);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion: all motion dead, final states rendered.
+--------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .load-fade {
+    opacity: 1;
+    transform: none;
+  }
+  .load-snap {
+    transform: scaleX(1);
+  }
+  .ambient-drift {
+    animation: none !important;
+  }
 }
