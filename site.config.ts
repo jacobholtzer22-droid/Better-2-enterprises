@@ -297,7 +297,7 @@ export const site = {
         {
           name: 'Transit shelter pads and sidewalks',
           description:
-            'Concrete pads, connecting sidewalks, and shelter installations for transit stops — the core of our public permit record in Flint.',
+            'Concrete pads, connecting sidewalks, and shelter installations for transit stops. This is the core of our public permit record in Flint.',
         },
         {
           name: 'Public school district work',
@@ -360,7 +360,7 @@ export const site = {
         {
           name: 'Tear-out and haul-away',
           description:
-            'We remove the old concrete and haul it off — you never deal with the rubble.',
+            'We remove the old concrete and haul it off, so you never deal with the rubble.',
         },
       ] satisfies ServiceItem[],
     },
@@ -380,7 +380,7 @@ export const site = {
     {
       step: 'Tear-out and prep',
       detail:
-        'Old concrete comes out and gets hauled away. The subgrade is graded and compacted — the part of the job you never see is the part that decides how long the slab lasts.',
+        'Old concrete comes out and gets hauled away. The subgrade is graded and compacted. The part of the job you never see is the part that decides how long the slab lasts.',
     },
     {
       step: 'Form and pour',
@@ -409,7 +409,7 @@ export const site = {
       {
         name: 'Flint',
         blurb:
-          'The center of our permitted public work — transit shelter pads, slabs, and sidewalks across the city, filed 2018 through 2021.',
+          'The center of our permitted public work: transit shelter pads, slabs, and sidewalks across the city, filed 2018 through 2021.',
       },
       { name: 'Flushing' },
       {
@@ -427,7 +427,7 @@ export const site = {
       { name: 'Davison' },
       {
         name: 'Montrose',
-        blurb: 'Our home base — Better 2 Enterprises has worked out of Montrose since 2002.',
+        blurb: 'Our home base. Better 2 Enterprises has worked out of Montrose since 2002.',
       },
       { name: 'Mt. Morris' },
       { name: 'Linden' },
@@ -448,7 +448,7 @@ export const site = {
       {
         question: 'What areas do you cover?',
         answer:
-          'We work across Genesee County — Flint, Flushing, Burton, Grand Blanc, Swartz Creek, Clio, Davison, and our home base of Montrose — plus nearby communities like Chesaning, Birch Run, Owosso, and Frankenmuth. If you are close to that area, call and ask.',
+          'We work across Genesee County: Flint, Flushing, Burton, Grand Blanc, Swartz Creek, Clio, Davison, and our home base of Montrose, plus nearby communities like Chesaning, Birch Run, Owosso, and Frankenmuth. If you are close to that area, call and ask.',
       },
       {
         question: 'Do you work with school districts and municipalities?',
@@ -475,7 +475,7 @@ export const site = {
       {
         question: 'Can you work around an operating business?',
         answer:
-          'Yes — that is normal for commercial concrete. We plan pours and closures with you in advance so customers, tenants, and deliveries keep moving, and we keep the work zone contained and cleaned up.',
+          'Yes, that is normal for commercial concrete. We plan pours and closures with you in advance so customers, tenants, and deliveries keep moving, and we keep the work zone contained and cleaned up.',
       },
       {
         question: 'Do you coordinate with general contractors and other trades?',
@@ -490,14 +490,14 @@ export const site = {
       {
         question: 'Can you build ADA-compliant ramps and walks?',
         answer:
-          'Yes. Accessible ramps, routes, and detectable warning surfaces are built to current accessibility standards — a normal part of commercial and public sidewalk work.',
+          'Yes. Accessible ramps, routes, and detectable warning surfaces are built to current accessibility standards, a normal part of commercial and public sidewalk work.',
       },
     ] satisfies FaqItem[],
     municipal: [
       {
         question: 'What public work have you actually done?',
         answer:
-          'Our Genesee County permit record includes concrete pads, slabs, and sidewalks for transit shelters across Flint — on Flushing Rd, Miller Rd, S Linden Rd, W Bristol Rd, and Mallery St — filed between 2018 and 2021. The full record is on this page and on the projects page.',
+          'Our Genesee County permit record includes concrete pads, slabs, and sidewalks for transit shelters across Flint, on Flushing Rd, Miller Rd, S Linden Rd, W Bristol Rd, and Mallery St, filed between 2018 and 2021. The full record is on this page and on the projects page.',
       },
       {
         question: 'Can you work while a building is occupied?',
@@ -507,7 +507,7 @@ export const site = {
       {
         question: 'Do you work around school calendars?',
         answer:
-          'Yes. School district work gets scheduled around the calendar — summer breaks, holiday breaks, and after-hours windows — so the work is done when the site is quiet.',
+          'Yes. School district work gets scheduled around the calendar, using summer breaks, holiday breaks, and after-hours windows, so the work is done when the site is quiet.',
       },
       {
         question: 'How do we get you on a bid list?',
@@ -519,7 +519,7 @@ export const site = {
       {
         question: 'How long before I can use my new driveway?',
         answer:
-          'You can typically walk on new concrete after a day or two, but it needs about a week before it should take the weight of a vehicle — concrete keeps gaining strength as it cures. We give you exact guidance for your pour before we leave the job.',
+          'You can typically walk on new concrete after a day or two, but it needs about a week before it should take the weight of a vehicle, because concrete keeps gaining strength as it cures. We give you exact guidance for your pour before we leave the job.',
       },
       {
         question: 'Do you handle tear-out of the old concrete?',
@@ -529,12 +529,12 @@ export const site = {
       {
         question: 'What drives the cost of a new driveway or patio?',
         answer:
-          'Size and thickness of the slab, how much old concrete has to come out, the condition of the base underneath, and access for trucks and equipment. Every job is different, which is why we quote from the actual site — call or send the form and we will give you a real number.',
+          'Size and thickness of the slab, how much old concrete has to come out, the condition of the base underneath, and access for trucks and equipment. Every job is different, which is why we quote from the actual site. Call or send the form and we will give you a real number.',
       },
       {
         question: 'Why do driveways crack, and what do you do about it?',
         answer:
-          'All concrete moves as it cures and as the ground freezes and thaws. The answer is control joints — cuts placed at deliberate intervals so the slab cracks along clean, straight lines you will never notice instead of wandering across the surface. Proper base prep and drainage do the rest.',
+          'All concrete moves as it cures and as the ground freezes and thaws. The answer is control joints: cuts placed at deliberate intervals so the slab cracks along clean, straight lines you will never notice instead of wandering across the surface. Proper base prep and drainage do the rest.',
       },
     ] satisfies FaqItem[],
   },
@@ -546,11 +546,11 @@ export const site = {
     home: {
       h1: 'Concrete contractor for Genesee County',
       heroLead:
-        'Commercial, municipal, and residential concrete out of Montrose, Michigan. Flatwork, sidewalks, foundations, and site concrete — formed, poured, and finished by the same family-run company since 2002.',
+        'Commercial, municipal, and residential concrete out of Montrose, Michigan. Flatwork, sidewalks, foundations, and site concrete, formed, poured, and finished by the same family-run company since 2002.',
       splitHeading: 'Two kinds of customers. One standard of work.',
       commercialCard: {
         title: 'Commercial & public work',
-        body: 'Flatwork, sidewalks, curb and gutter, ADA ramps, and site concrete for GCs, property managers, school districts, and municipalities. Evidence over adjectives — start with the permit record.',
+        body: 'Flatwork, sidewalks, curb and gutter, ADA ramps, and site concrete for GCs, property managers, school districts, and municipalities. Evidence over adjectives: start with the permit record.',
         link: '/municipal-and-institutional',
         linkLabel: 'See the public project record',
       },
@@ -562,7 +562,7 @@ export const site = {
       },
       projectPreviewHeading: 'On the public record',
       projectPreviewSub:
-        'A sample of permitted work from Genesee County building filings. No stock photos, no invented case studies — the record speaks for itself.',
+        'A sample of permitted work from Genesee County building filings. No stock photos, no invented case studies. The record speaks for itself.',
       trust: {
         heading: 'The short version',
         yearsLabel: 'Years in business',
@@ -608,7 +608,7 @@ export const site = {
       h1: 'Municipal, transit, and school district concrete',
       recordHeading: 'The public record',
       recordSub:
-        'These are permitted, completed projects from Genesee County building filings — locations, scope as written on the permit, and year. This is the evidence a facilities director actually wants.',
+        'These are permitted, completed projects from Genesee County building filings: locations, scope as written on the permit, and year. This is the evidence a facilities director actually wants.',
       expectations: [
         {
           title: 'Working around the public',
@@ -624,7 +624,7 @@ export const site = {
         },
         {
           title: 'ADA compliance on walks and ramps',
-          body: 'Accessible routes, ramp slopes, and detectable warning surfaces built to current standards — a core part of public sidewalk work.',
+          body: 'Accessible routes, ramp slopes, and detectable warning surfaces built to current standards, a core part of public sidewalk work.',
         },
       ],
     },
@@ -634,15 +634,15 @@ export const site = {
         'Driveway replacement, patios, garage floors, and walkways for Genesee County homeowners. Tear-out included, written quotes, honest timelines. (810) 397-5000.',
       h1: 'Driveways, patios, and garage floors',
       processHeading: 'How the job runs',
-      processSub: 'From first call to finished slab — what actually happens, in order.',
+      processSub: 'From first call to finished slab: what actually happens, in order.',
     },
     projects: {
       title: 'Project Record | Better 2 Enterprises, Genesee County',
       description:
-        'Permitted concrete projects across Flint, Burton, and Grand Blanc — transit shelters, foundations, and site work from Genesee County building filings.',
+        'Permitted concrete projects across Flint, Burton, and Grand Blanc: transit shelters, foundations, and site work from Genesee County building filings.',
       h1: 'The project record',
       intro:
-        'Every entry below is a permitted, completed project from Genesee County building filings — the location, the scope as written on the permit, and the year. We would rather show you the public record than tell you a story.',
+        'Every entry below is a permitted, completed project from Genesee County building filings: the location, the scope as written on the permit, and the year. We would rather show you the public record than tell you a story.',
       galleryHeading: 'From our job sites',
     },
     about: {
@@ -651,10 +651,10 @@ export const site = {
         'Family-run concrete contractor in Montrose, MI. Incorporated 2002, BBB accredited since 2018 with an A+ rating. Commercial, municipal, and residential work.',
       h1: 'A family-run concrete company out of Montrose',
       body: [
-        'Better 2 Enterprises Inc. was incorporated in September 2002 and has been doing concrete work in Genesee County ever since — coming up on a quarter century of the same trade in the same place.',
+        'Better 2 Enterprises Inc. was incorporated in September 2002 and has been doing concrete work in Genesee County ever since, coming up on a quarter century of the same trade in the same place.',
         'The company is run by Steve Hoadley. The work is a mix that most contractors never manage to hold together: transit shelter pads and public sidewalks across Flint, foundations and site work, school district projects, and driveways and patios for homeowners.',
         'Better 2 Enterprises has been a BBB Accredited Business since March 2018 and holds an A+ rating.',
-        'If you want to know what the work looks like, start with the project record — it is public, it is permitted, and it is ours.',
+        'If you want to know what the work looks like, start with the project record. It is public, it is permitted, and it is ours.',
       ],
     },
     serviceAreas: {
@@ -668,7 +668,7 @@ export const site = {
     contact: {
       title: 'Get a Concrete Quote | Better 2 Enterprises',
       description:
-        'Request a quote from Better 2 Enterprises — commercial, municipal, and residential concrete across Genesee County, MI. Call (810) 397-5000 or send the form.',
+        'Request a quote from Better 2 Enterprises: commercial, municipal, and residential concrete across Genesee County, MI. Call (810) 397-5000 or send the form.',
       h1: 'Tell us about the job',
       intro:
         'Call (810) 397-5000 or send the form below. Give us the location and a rough idea of the work, and we will take it from there.',
