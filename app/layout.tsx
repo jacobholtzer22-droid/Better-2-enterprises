@@ -9,9 +9,10 @@ import './globals.css'
 
 // Self-hosted via next/font: static font files served from our origin,
 // font-display swap, zero render-blocking third-party requests.
+// Only the weights actually used: 700 sitewide, 800 for hero display work.
 const display = Big_Shoulders_Display({
   subsets: ['latin'],
-  weight: ['500', '600', '700', '800'],
+  weight: ['700', '800'],
   variable: '--font-display',
   display: 'swap',
 })

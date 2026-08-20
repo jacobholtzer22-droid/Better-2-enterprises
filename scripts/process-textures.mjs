@@ -20,13 +20,30 @@ import path from 'node:path'
 
 const SOURCE_DIR = 'public/images/texture'
 const OUT_DIR = 'public/images/texture-processed'
-const WIDTHS = [960, 1600, 2400]
-// Backgrounds sit under text at <=12% opacity: quality can go LOW.
+// Textures render at 4-12% opacity: detail is imperceptible. Cap at 960px
+// longest edge, blur before encoding (high-frequency detail is what kills
+// compression), and encode aggressively. Target: every variant under 40KB.
+const WIDTHS = [640, 960]
+const BLUR_SIGMA = 1.8
 const FORMATS = [
   { ext: 'avif', options: { quality: 45 } },
-  { ext: 'webp', options: { quality: 62 } },
-  { ext: 'jpg', options: { quality: 68, mozjpeg: true } },
+  { ext: 'webp', options: { quality: 52 } },
+  { ext: 'jpg', options: { quality: 58, mozjpeg: true } },
 ]
+// The hero ambient renders full-viewport and eager. Chrome treats any large
+// <img> as an LCP candidate UNLESS it falls under the low-entropy threshold
+// (0.05 bits per displayed pixel). Crushing this one file keeps the H1 as
+// the LCP element — verified by measurement, see docs/DESIGN-PLAN.md.
+const OVERRIDES = {
+  'hero-broom-finish': {
+    blur: 4,
+    formats: [
+      { ext: 'avif', options: { quality: 24 } },
+      { ext: 'webp', options: { quality: 26 } },
+      { ext: 'jpg', options: { quality: 32, mozjpeg: true } },
+    ],
+  },
+}
 
 async function main() {
   const manifest = {}
@@ -46,14 +63,21 @@ async function main() {
     const base = path.parse(file).name.toLowerCase().replace(/[^a-z0-9-]+/g, '-')
     const srcStat = await stat(srcPath)
     const meta = await sharp(srcPath).metadata()
+    const override = OVERRIDES[base]
+    const blurSigma = override?.blur ?? BLUR_SIGMA
+    const formats = override?.formats ?? FORMATS
     const variants = []
     for (const width of WIDTHS) {
       if (meta.width && width > meta.width) continue
-      for (const { ext, options } of FORMATS) {
+      for (const { ext, options } of formats) {
         const outName = `${base}-${width}.${ext}`
         const outPath = path.join(OUT_DIR, outName)
         if (!existsSync(outPath) || (await stat(outPath)).mtimeMs < srcStat.mtimeMs) {
-          await sharp(srcPath).resize({ width }).toFormat(ext === 'jpg' ? 'jpeg' : ext, options).toFile(outPath)
+          await sharp(srcPath)
+            .resize({ width })
+            .blur(blurSigma)
+            .toFormat(ext === 'jpg' ? 'jpeg' : ext, options)
+            .toFile(outPath)
         }
         variants.push({
           src: `/images/texture-processed/${outName}`,

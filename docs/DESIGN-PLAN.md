@@ -141,6 +141,16 @@ request). Explicit fallback stacks on every face.
   permitted projects = 7), rendering final value immediately under reduced
   motion.
 
+### Texture payload + LCP protection (measured, binding)
+
+Textures serve at 640/960px max, blurred (sigma 1.8) and aggressively
+encoded — every variant under 40KB. The hero ambient layer is crushed
+further (sigma 4, AVIF q24 → 2.0KB @960w): Chrome counts any large `<img>`
+as an LCP candidate even at 8% opacity, but excludes images under 0.05 bits
+per displayed pixel as low-entropy. Measured before/after: at 8KB the
+texture WAS the LCP element; at 2KB the H1 text is. Do not raise the hero
+texture quality without re-measuring the LCP element.
+
 ### Imagery stance
 
 - Zero real photos exist at Phase 0. The system above is designed to carry
