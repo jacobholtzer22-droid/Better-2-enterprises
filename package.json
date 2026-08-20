@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run images && next build",
+    "build": "npm run images && npm run textures && next build && node scripts/verify-textures.mjs",
     "images": "node scripts/process-images.mjs",
+    "textures": "node scripts/process-textures.mjs",
+    "verify:texture-contrast": "node scripts/verify-texture-contrast.mjs",
     "start": "next start",
     "lint": "next lint",
     "verify:schema": "node scripts/verify-schema.mjs",

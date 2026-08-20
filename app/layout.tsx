@@ -4,6 +4,7 @@ import { site } from '@/site.config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import MobileCtaBar from '@/components/MobileCtaBar'
+import { GrainOverlay } from '@/components/Texture'
 import './globals.css'
 
 // Self-hosted via next/font: static font files served from our origin,
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <MobileCtaBar />
+        <GrainOverlay />
       </body>
     </html>
   )

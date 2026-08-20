@@ -1,0 +1,259 @@
+{
+  "aggregate-macro": {
+    "source": "aggregate-macro.jpg",
+    "width": 3104,
+    "height": 1312,
+    "variants": [
+      {
+        "src": "/images/texture-processed/aggregate-macro-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 81066
+      },
+      {
+        "src": "/images/texture-processed/aggregate-macro-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 100264
+      },
+      {
+        "src": "/images/texture-processed/aggregate-macro-960.jpg",
+        "width": 960,
+        "format": "jpg",
+        "bytes": 80784
+      },
+      {
+        "src": "/images/texture-processed/aggregate-macro-1600.avif",
+        "width": 1600,
+        "format": "avif",
+        "bytes": 199540
+      },
+      {
+        "src": "/images/texture-processed/aggregate-macro-1600.webp",
+        "width": 1600,
+        "format": "webp",
+        "bytes": 249758
+      },
+      {
+        "src": "/images/texture-processed/aggregate-macro-1600.jpg",
+        "width": 1600,
+        "format": "jpg",
+        "bytes": 207530
+      },
+      {
+        "src": "/images/texture-processed/aggregate-macro-2400.avif",
+        "width": 2400,
+        "format": "avif",
+        "bytes": 350656
+      },
+      {
+        "src": "/images/texture-processed/aggregate-macro-2400.webp",
+        "width": 2400,
+        "format": "webp",
+        "bytes": 468342
+      },
+      {
+        "src": "/images/texture-processed/aggregate-macro-2400.jpg",
+        "width": 2400,
+        "format": "jpg",
+        "bytes": 413655
+      }
+    ]
+  },
+  "cure-transition": {
+    "source": "cure-transition.jpg",
+    "width": 2720,
+    "height": 1536,
+    "variants": [
+      {
+        "src": "/images/texture-processed/cure-transition-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 105665
+      },
+      {
+        "src": "/images/texture-processed/cure-transition-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 139580
+      },
+      {
+        "src": "/images/texture-processed/cure-transition-960.jpg",
+        "width": 960,
+        "format": "jpg",
+        "bytes": 98288
+      },
+      {
+        "src": "/images/texture-processed/cure-transition-1600.avif",
+        "width": 1600,
+        "format": "avif",
+        "bytes": 305706
+      },
+      {
+        "src": "/images/texture-processed/cure-transition-1600.webp",
+        "width": 1600,
+        "format": "webp",
+        "bytes": 404134
+      },
+      {
+        "src": "/images/texture-processed/cure-transition-1600.jpg",
+        "width": 1600,
+        "format": "jpg",
+        "bytes": 289520
+      },
+      {
+        "src": "/images/texture-processed/cure-transition-2400.avif",
+        "width": 2400,
+        "format": "avif",
+        "bytes": 625427
+      },
+      {
+        "src": "/images/texture-processed/cure-transition-2400.webp",
+        "width": 2400,
+        "format": "webp",
+        "bytes": 869972
+      },
+      {
+        "src": "/images/texture-processed/cure-transition-2400.jpg",
+        "width": 2400,
+        "format": "jpg",
+        "bytes": 653656
+      }
+    ]
+  },
+  "formwork-plywood": {
+    "source": "formwork-plywood.jpg",
+    "width": 2496,
+    "height": 654,
+    "variants": [
+      {
+        "src": "/images/texture-processed/formwork-plywood-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 18469
+      },
+      {
+        "src": "/images/texture-processed/formwork-plywood-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 28484
+      },
+      {
+        "src": "/images/texture-processed/formwork-plywood-960.jpg",
+        "width": 960,
+        "format": "jpg",
+        "bytes": 28721
+      },
+      {
+        "src": "/images/texture-processed/formwork-plywood-1600.avif",
+        "width": 1600,
+        "format": "avif",
+        "bytes": 42380
+      },
+      {
+        "src": "/images/texture-processed/formwork-plywood-1600.webp",
+        "width": 1600,
+        "format": "webp",
+        "bytes": 67792
+      },
+      {
+        "src": "/images/texture-processed/formwork-plywood-1600.jpg",
+        "width": 1600,
+        "format": "jpg",
+        "bytes": 73924
+      },
+      {
+        "src": "/images/texture-processed/formwork-plywood-2400.avif",
+        "width": 2400,
+        "format": "avif",
+        "bytes": 77335
+      },
+      {
+        "src": "/images/texture-processed/formwork-plywood-2400.webp",
+        "width": 2400,
+        "format": "webp",
+        "bytes": 119890
+      },
+      {
+        "src": "/images/texture-processed/formwork-plywood-2400.jpg",
+        "width": 2400,
+        "format": "jpg",
+        "bytes": 148175
+      }
+    ]
+  },
+  "hero-broom-finish": {
+    "source": "hero-broom-finish.jpg",
+    "width": 2720,
+    "height": 1536,
+    "variants": [
+      {
+        "src": "/images/texture-processed/hero-broom-finish-960.avif",
+        "width": 960,
+        "format": "avif",
+        "bytes": 55461
+      },
+      {
+        "src": "/images/texture-processed/hero-broom-finish-960.webp",
+        "width": 960,
+        "format": "webp",
+        "bytes": 99892
+      },
+      {
+        "src": "/images/texture-processed/hero-broom-finish-960.jpg",
+        "width": 960,
+        "format": "jpg",
+        "bytes": 78590
+      },
+      {
+        "src": "/images/texture-processed/hero-broom-finish-1600.avif",
+        "width": 1600,
+        "format": "avif",
+        "bytes": 194333
+      },
+      {
+        "src": "/images/texture-processed/hero-broom-finish-1600.webp",
+        "width": 1600,
+        "format": "webp",
+        "bytes": 317688
+      },
+      {
+        "src": "/images/texture-processed/hero-broom-finish-1600.jpg",
+        "width": 1600,
+        "format": "jpg",
+        "bytes": 246708
+      },
+      {
+        "src": "/images/texture-processed/hero-broom-finish-2400.avif",
+        "width": 2400,
+        "format": "avif",
+        "bytes": 444854
+      },
+      {
+        "src": "/images/texture-processed/hero-broom-finish-2400.webp",
+        "width": 2400,
+        "format": "webp",
+        "bytes": 696664
+      },
+      {
+        "src": "/images/texture-processed/hero-broom-finish-2400.jpg",
+        "width": 2400,
+        "format": "jpg",
+        "bytes": 563702
+      }
+    ]
+  },
+  "drawing-stock-grain": {
+    "source": "drawing-stock-grain.png",
+    "width": 320,
+    "height": 320,
+    "variants": [
+      {
+        "src": "/images/texture-processed/drawing-stock-grain.png",
+        "width": 320,
+        "format": "png",
+        "bytes": 60849
+      }
+    ]
+  }
+}

@@ -31,3 +31,4 @@ next-env.d.ts
 # manifest.json IS committed — components/Picture.tsx imports it at type-check
 # time, so a fresh clone must have it.
 /public/images/processed/
+/public/images/texture-processed/
