@@ -10,7 +10,11 @@
   --joint: #c2c7bf; /* hairline rules — control joints */
   --aggregate: #545d56; /* secondary text — exposed aggregate */
   --ink: #161d24; /* primary text / dark sections — structural navy */
-  --chalk: #1e5fa8; /* single accent — chalk-line blue */
+  --chalk: #3240c0; /* single accent — snap-line chalk blue (saturated, violet cast) */
+  /* Derived, not a 7th named hex: lightened chalk for rules/underlines on
+     dark --ink surfaces, where raw --chalk fails contrast (~2.1:1). Never
+     used as text color. */
+  --chalk-lift: color-mix(in oklab, var(--chalk), white 55%);
 }
 
 html {

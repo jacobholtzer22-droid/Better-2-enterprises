@@ -63,14 +63,26 @@ everything else stays quiet and load-bearing.
 | `--joint` | `#C2C7BF` | Hairline rules, borders, saw-cut ticks | The shadow line of a control joint |
 | `--aggregate` | `#545D56` | Secondary text, captions, meta | Exposed-aggregate green-grey mid-tone |
 | `--ink` | `#161D24` | Primary text, structural dark sections | Near-black structural navy — institutional weight |
-| `--chalk` | `#1E5FA8` | Single accent: links, CTAs, marks | Chalk-line blue (snapped-line pigment) |
+| `--chalk` | `#3240C0` | Single accent: links, CTAs, marks | Snap-line chalk blue — saturated with a violet cast, like the actual pigment (tuned per client feedback from an earlier corporate `#1E5FA8`) |
 
-Contrast (checked, will be re-verified in build):
+Contrast (computed):
 - `--ink` on `--slab` ≈ 13.9:1 ✓ (body)
 - `--aggregate` on `--slab` ≈ 5.9:1 ✓ (secondary text)
-- `--chalk` on `--slab` ≈ 6.0:1 ✓ (links)
-- `#FFFFFF` on `--chalk` ≈ 6.9:1 ✓ (button text)
+- `--chalk` on `--slab` = 6.91:1 ✓ (links)
+- `#FFFFFF` on `--chalk` = 7.98:1 ✓ (button text)
 - `--slab` on `--ink` ≈ 13.9:1 ✓ (dark sections)
+- `--chalk` on `--ink` = 2.13:1 ✗ — chalk is NEVER used as text or UI color
+  on dark sections; a `color-mix()` lightened derivative (`--chalk-lift`,
+  not a 7th named hex) handles rules/underlines there.
+
+### Weight directive (client feedback, binding)
+
+The light "printed drawing" direction must not drift architecture-firm
+delicate. This is a concrete sub bidding municipal work: display type set
+heavy (700–800), structural rules that read as cuts rather than hairline
+decoration where sections carry weight, generous but disciplined spacing.
+Confident, not precious. If a section starts feeling airy for its own sake,
+add weight.
 
 Rule: components reference tokens only (Tailwind theme maps to the CSS
 custom properties). No raw hex in components.

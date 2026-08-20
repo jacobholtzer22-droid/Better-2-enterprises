@@ -51,6 +51,14 @@ export interface CityInfo {
 // Derived values
 // ---------------------------------------------------------------------------
 
+/**
+ * Production URL — THE single place the domain lives. Canonicals, sitemap,
+ * OG URLs, and the LocalBusiness schema @id all derive from `site.url`,
+ * which reads this constant. Changing the domain is a one-line edit here.
+ * PLACEHOLDER until Jacob confirms the registered domain (CLIENT-TODO #11).
+ */
+const PRODUCTION_URL = 'https://www.PUT_DOMAIN_HERE.com'
+
 const FOUNDED = { year: 2002, month: 9, day: 23 } as const
 
 /** Full years since incorporation (Sept 23, 2002), anniversary-accurate. */
@@ -103,17 +111,16 @@ export const site = {
       accreditedSince: '2018-03-16',
       accreditedSinceDisplay: 'March 2018',
       rating: 'A+',
-      /** Real BBB profile URL — to be added before Phase 5 sameAs is final. */
-      profileUrl: null as string | null,
+      profileUrl:
+        'https://www.bbb.org/us/mi/montrose/profile/concrete-contractors/better-2-enterprises-0372-90032896',
     },
-    /** BuildZoom profile URL — to be added before Phase 5 sameAs is final. */
-    buildZoomUrl: null as string | null,
+    buildZoomUrl: 'https://www.buildzoom.com/contractor/better-2-enterprises-inc',
     /** GBP URL — Jacob supplies after launch; then redeploy with sameAs. */
     googleBusinessProfileUrl: null as string | null,
   },
 
-  /** Production URL. Confirm final domain before deploy (docs/CLIENT-TODO.md). */
-  url: 'https://www.better2enterprises.com',
+  /** Reads PRODUCTION_URL (top of file) — the only place the domain lives. */
+  url: PRODUCTION_URL,
 
   // -------------------------------------------------------------------------
   // Contact form → Align & Acquire CRM
@@ -285,7 +292,7 @@ export const site = {
       title: 'Municipal, Transit & School District Work',
       href: '/municipal-and-institutional',
       intro:
-        'Public work is its own discipline: occupied buildings, school calendars, transit schedules, and the public walking past your work zone every day. Better 2 Enterprises has been doing this work in Genesee County for over two decades — the permit record below is the proof.',
+        'Public work is its own discipline: occupied buildings, school calendars, transit schedules, and the public walking past your work zone every day. Better 2 Enterprises has worked in Genesee County since 2002, and the permitted public projects below are on the record.',
       items: [
         {
           name: 'Transit shelter pads and sidewalks',
@@ -392,42 +399,35 @@ export const site = {
   // -------------------------------------------------------------------------
   serviceArea: {
     region: 'Genesee County, Michigan',
+    /**
+     * Blurbs exist ONLY where the permit record or verified facts support a
+     * true, specific claim (Flint, Burton, Grand Blanc = permitted work;
+     * Montrose = verified home base). Every other city is served, listed
+     * plainly, and gets no invented paragraph.
+     */
     core: [
       {
         name: 'Flint',
         blurb:
-          'The center of our public work — transit shelter pads, slabs, and sidewalks across the city are on our permit record.',
+          'The center of our permitted public work — transit shelter pads, slabs, and sidewalks across the city, filed 2018 through 2021.',
       },
-      {
-        name: 'Flushing',
-        blurb:
-          'Commercial and residential concrete just west of Flint, minutes from our Montrose home base.',
-      },
+      { name: 'Flushing' },
       {
         name: 'Burton',
         blurb:
-          'Garage foundations and residential flatwork — including a permitted detached-garage foundation on E Atherton Rd.',
+          'Site of a permitted foundation for a 24\' x 32\' detached garage on E Atherton Rd (2019).',
       },
       {
         name: 'Grand Blanc',
         blurb:
-          'Site work and residential concrete, including permitted demolition and site restoration work.',
+          'Site of permitted inground pool demolition and site restoration on Fenton Rd (2019).',
       },
-      {
-        name: 'Swartz Creek',
-        blurb: 'Driveways, patios, and commercial flatwork on the county’s southwest side.',
-      },
-      {
-        name: 'Clio',
-        blurb: 'Residential and commercial concrete along the I-75 corridor north of Flint.',
-      },
-      {
-        name: 'Davison',
-        blurb: 'Concrete work east of Flint, from driveways to site concrete.',
-      },
+      { name: 'Swartz Creek' },
+      { name: 'Clio' },
+      { name: 'Davison' },
       {
         name: 'Montrose',
-        blurb: 'Our home base — Better 2 Enterprises has worked from Montrose since 2002.',
+        blurb: 'Our home base — Better 2 Enterprises has worked out of Montrose since 2002.',
       },
       { name: 'Mt. Morris' },
       { name: 'Linden' },
@@ -458,7 +458,7 @@ export const site = {
       {
         question: 'Do you do residential work too?',
         answer:
-          'Yes. Driveways, driveway replacement, patios, garage floors, sidewalks, porches, and steps for homeowners across Genesee County. Same crew, same standards as our commercial work.',
+          'Yes. Driveways, driveway replacement, patios, garage floors, sidewalks, porches, and steps for homeowners across Genesee County. The same company that pours transit pads for the public record pours your driveway.',
       },
       {
         question: 'How long has Better 2 Enterprises been in business?',
@@ -480,7 +480,7 @@ export const site = {
       {
         question: 'Do you coordinate with general contractors and other trades?',
         answer:
-          'Yes. We regularly work as the concrete sub on larger projects — coordinating schedule, grade, and inspection points with the GC and the trades before and after us.',
+          'Yes. Coordinating schedule, grade, embeds, and inspection points with the GC and the trades before and after us is part of the job on commercial work.',
       },
       {
         question: 'Do you handle demolition and subgrade prep?',
@@ -490,7 +490,7 @@ export const site = {
       {
         question: 'Can you build ADA-compliant ramps and walks?',
         answer:
-          'Yes. Accessible ramps, routes, and detectable warning surfaces are part of our regular commercial and public work, built to current accessibility standards.',
+          'Yes. Accessible ramps, routes, and detectable warning surfaces are built to current accessibility standards — a normal part of commercial and public sidewalk work.',
       },
     ] satisfies FaqItem[],
     municipal: [
@@ -567,7 +567,7 @@ export const site = {
         heading: 'The short version',
         yearsLabel: 'Years in business',
         bbbLabel: 'BBB rating, accredited since 2018',
-        permitsLabel: 'Permitted public projects on record',
+        permitsLabel: 'Projects on the public permit record',
       },
       faqHeading: 'Common questions',
       finalCta: {
@@ -620,7 +620,7 @@ export const site = {
         },
         {
           title: 'Bid-ready and paperwork-ready',
-          body: 'Two decades of permitted public work in Genesee County means the documentation side of the job is familiar ground. Call and tell us about the project.',
+          body: 'A public permit record across Flint means the documentation side of the job is familiar ground. Call and tell us about the project.',
         },
         {
           title: 'ADA compliance on walks and ramps',
