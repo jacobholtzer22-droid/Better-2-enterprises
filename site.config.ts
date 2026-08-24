@@ -643,6 +643,8 @@ export const site = {
       h1: 'The project record',
       intro:
         'Every entry below is a permitted, completed project from Genesee County building filings: the location, the scope as written on the permit, and the year. We would rather show you the public record than tell you a story.',
+      photoNote:
+        'Photography of our own completed work is coming. Until then, this page stays photo-free on purpose: the permit record above is verified public history, and we will not dress it up with pictures of someone else\'s concrete.',
       galleryHeading: 'From our job sites',
     },
     about: {
@@ -686,6 +688,76 @@ export const site = {
       description:
         'Commercial, municipal, and residential concrete across Flint and Genesee County, MI. Family-run since 2002, BBB A+ accredited. Call (810) 397-5000.',
     },
+  },
+
+  // -------------------------------------------------------------------------
+  // Page imagery — licensed stock (Pexels), ILLUSTRATIVE ONLY, see
+  // docs/PHOTOS.md. Alt text describes the photo; it never attributes the
+  // work to Better 2 and never names a location. NONE of these render on
+  // /projects. Swap role-by-role when Steve's real photos arrive.
+  // -------------------------------------------------------------------------
+  images: {
+    homeBand: {
+      name: 'stock-driveway-pour',
+      alt: 'Concrete crew screeding a freshly poured residential driveway behind a mixer truck',
+    },
+    commercialHero: {
+      name: 'stock-power-screed',
+      alt: 'Power screed leveling a freshly poured concrete slab along a curb form',
+    },
+    commercialSecondary: {
+      name: 'stock-curb-form',
+      alt: 'Wet concrete being placed and worked in curb and gutter formwork',
+    },
+    municipalBand: {
+      name: 'stock-spreading-concrete',
+      alt: 'Worker spreading wet concrete across wire mesh reinforcement with a shovel',
+    },
+    residentialHero: {
+      name: 'stock-driveway-home',
+      alt: 'Broom-finished two-car concrete driveway leading to a suburban home',
+    },
+    residentialProcess: {
+      name: 'stock-footing-pour',
+      alt: 'Concrete being placed into a formed footing excavation with rebar staged alongside',
+    },
+    residentialDetail: {
+      name: 'stock-mesh-macro',
+      alt: 'Welded wire reinforcement mesh stacked before a concrete pour',
+    },
+    serviceAreasBand: {
+      name: 'stock-driveway-home-2',
+      alt: 'Wide concrete driveway in front of a two-story house',
+    },
+  },
+
+  // -------------------------------------------------------------------------
+  // Privacy policy (covers the quote form data + SMS consent)
+  // -------------------------------------------------------------------------
+  privacy: {
+    updated: 'August 2026',
+    sections: [
+      {
+        heading: 'What we collect',
+        body: 'When you submit the quote request form on this site, we collect the information you enter: your name, phone number, email address if you provide one, and your message describing the work you need. Calling us does not collect anything through this website.',
+      },
+      {
+        heading: 'How we use it',
+        body: 'We use your contact information for one purpose: responding to your quote request and communicating with you about your project. We do not sell your information, and we do not share it with third parties for their own marketing.',
+      },
+      {
+        heading: 'Text messages',
+        body: 'The form includes a consent checkbox for text messages. If you check it, we may text you about your quote request. Message and data rates may apply. You can opt out at any time by replying STOP to any message, and we will stop texting you.',
+      },
+      {
+        heading: 'Who processes the data',
+        body: 'Form submissions are processed and stored by Align and Acquire, the company that operates this website on our behalf, and are used only to deliver your request to us.',
+      },
+      {
+        heading: 'Questions',
+        body: 'If you want to know what information we have about you or want it removed, call us at (810) 397-5000.',
+      },
+    ],
   },
 
   footer: {

@@ -1,1 +1,490 @@
-{}
+{
+  "stock-curb-form": {
+    "source": "stock-curb-form.jpg",
+    "width": 1920,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/images/processed/stock-curb-form-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 53499
+      },
+      {
+        "src": "/images/processed/stock-curb-form-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 54942
+      },
+      {
+        "src": "/images/processed/stock-curb-form-640.jpg",
+        "width": 640,
+        "format": "jpg",
+        "bytes": 56523
+      },
+      {
+        "src": "/images/processed/stock-curb-form-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 162740
+      },
+      {
+        "src": "/images/processed/stock-curb-form-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 178446
+      },
+      {
+        "src": "/images/processed/stock-curb-form-1280.jpg",
+        "width": 1280,
+        "format": "jpg",
+        "bytes": 192061
+      },
+      {
+        "src": "/images/processed/stock-curb-form-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 292902
+      },
+      {
+        "src": "/images/processed/stock-curb-form-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 322742
+      },
+      {
+        "src": "/images/processed/stock-curb-form-1920.jpg",
+        "width": 1920,
+        "format": "jpg",
+        "bytes": 409564
+      }
+    ]
+  },
+  "stock-driveway-home-2": {
+    "source": "stock-driveway-home-2.jpg",
+    "width": 1920,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/images/processed/stock-driveway-home-2-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 45209
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-2-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 45464
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-2-640.jpg",
+        "width": 640,
+        "format": "jpg",
+        "bytes": 48982
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-2-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 170706
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-2-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 185492
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-2-1280.jpg",
+        "width": 1280,
+        "format": "jpg",
+        "bytes": 193768
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-2-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 325618
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-2-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 381604
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-2-1920.jpg",
+        "width": 1920,
+        "format": "jpg",
+        "bytes": 438527
+      }
+    ]
+  },
+  "stock-driveway-home": {
+    "source": "stock-driveway-home.jpg",
+    "width": 1920,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/images/processed/stock-driveway-home-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 52169
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 53674
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-640.jpg",
+        "width": 640,
+        "format": "jpg",
+        "bytes": 54316
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 189353
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 202534
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-1280.jpg",
+        "width": 1280,
+        "format": "jpg",
+        "bytes": 206194
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 341556
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 382534
+      },
+      {
+        "src": "/images/processed/stock-driveway-home-1920.jpg",
+        "width": 1920,
+        "format": "jpg",
+        "bytes": 452338
+      }
+    ]
+  },
+  "stock-driveway-pour": {
+    "source": "stock-driveway-pour.jpg",
+    "width": 1920,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/images/processed/stock-driveway-pour-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 42508
+      },
+      {
+        "src": "/images/processed/stock-driveway-pour-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 40796
+      },
+      {
+        "src": "/images/processed/stock-driveway-pour-640.jpg",
+        "width": 640,
+        "format": "jpg",
+        "bytes": 45491
+      },
+      {
+        "src": "/images/processed/stock-driveway-pour-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 143329
+      },
+      {
+        "src": "/images/processed/stock-driveway-pour-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 144262
+      },
+      {
+        "src": "/images/processed/stock-driveway-pour-1280.jpg",
+        "width": 1280,
+        "format": "jpg",
+        "bytes": 161617
+      },
+      {
+        "src": "/images/processed/stock-driveway-pour-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 270591
+      },
+      {
+        "src": "/images/processed/stock-driveway-pour-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 292074
+      },
+      {
+        "src": "/images/processed/stock-driveway-pour-1920.jpg",
+        "width": 1920,
+        "format": "jpg",
+        "bytes": 357150
+      }
+    ]
+  },
+  "stock-footing-pour": {
+    "source": "stock-footing-pour.jpg",
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      {
+        "src": "/images/processed/stock-footing-pour-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 160893
+      },
+      {
+        "src": "/images/processed/stock-footing-pour-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 166244
+      },
+      {
+        "src": "/images/processed/stock-footing-pour-640.jpg",
+        "width": 640,
+        "format": "jpg",
+        "bytes": 144680
+      },
+      {
+        "src": "/images/processed/stock-footing-pour-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 638907
+      },
+      {
+        "src": "/images/processed/stock-footing-pour-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 676484
+      },
+      {
+        "src": "/images/processed/stock-footing-pour-1280.jpg",
+        "width": 1280,
+        "format": "jpg",
+        "bytes": 597749
+      },
+      {
+        "src": "/images/processed/stock-footing-pour-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 1151350
+      },
+      {
+        "src": "/images/processed/stock-footing-pour-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 1333384
+      },
+      {
+        "src": "/images/processed/stock-footing-pour-1920.jpg",
+        "width": 1920,
+        "format": "jpg",
+        "bytes": 1316633
+      }
+    ]
+  },
+  "stock-mesh-macro": {
+    "source": "stock-mesh-macro.jpg",
+    "width": 1920,
+    "height": 1275,
+    "variants": [
+      {
+        "src": "/images/processed/stock-mesh-macro-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 116881
+      },
+      {
+        "src": "/images/processed/stock-mesh-macro-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 76846
+      },
+      {
+        "src": "/images/processed/stock-mesh-macro-640.jpg",
+        "width": 640,
+        "format": "jpg",
+        "bytes": 80499
+      },
+      {
+        "src": "/images/processed/stock-mesh-macro-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 248980
+      },
+      {
+        "src": "/images/processed/stock-mesh-macro-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 218704
+      },
+      {
+        "src": "/images/processed/stock-mesh-macro-1280.jpg",
+        "width": 1280,
+        "format": "jpg",
+        "bytes": 254237
+      },
+      {
+        "src": "/images/processed/stock-mesh-macro-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 351375
+      },
+      {
+        "src": "/images/processed/stock-mesh-macro-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 375904
+      },
+      {
+        "src": "/images/processed/stock-mesh-macro-1920.jpg",
+        "width": 1920,
+        "format": "jpg",
+        "bytes": 479129
+      }
+    ]
+  },
+  "stock-power-screed": {
+    "source": "stock-power-screed.jpg",
+    "width": 1920,
+    "height": 1280,
+    "variants": [
+      {
+        "src": "/images/processed/stock-power-screed-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 52044
+      },
+      {
+        "src": "/images/processed/stock-power-screed-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 56654
+      },
+      {
+        "src": "/images/processed/stock-power-screed-640.jpg",
+        "width": 640,
+        "format": "jpg",
+        "bytes": 53800
+      },
+      {
+        "src": "/images/processed/stock-power-screed-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 170206
+      },
+      {
+        "src": "/images/processed/stock-power-screed-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 195026
+      },
+      {
+        "src": "/images/processed/stock-power-screed-1280.jpg",
+        "width": 1280,
+        "format": "jpg",
+        "bytes": 196830
+      },
+      {
+        "src": "/images/processed/stock-power-screed-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 299225
+      },
+      {
+        "src": "/images/processed/stock-power-screed-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 351662
+      },
+      {
+        "src": "/images/processed/stock-power-screed-1920.jpg",
+        "width": 1920,
+        "format": "jpg",
+        "bytes": 425256
+      }
+    ]
+  },
+  "stock-spreading-concrete": {
+    "source": "stock-spreading-concrete.jpg",
+    "width": 1920,
+    "height": 2560,
+    "variants": [
+      {
+        "src": "/images/processed/stock-spreading-concrete-640.avif",
+        "width": 640,
+        "format": "avif",
+        "bytes": 116598
+      },
+      {
+        "src": "/images/processed/stock-spreading-concrete-640.webp",
+        "width": 640,
+        "format": "webp",
+        "bytes": 124576
+      },
+      {
+        "src": "/images/processed/stock-spreading-concrete-640.jpg",
+        "width": 640,
+        "format": "jpg",
+        "bytes": 123340
+      },
+      {
+        "src": "/images/processed/stock-spreading-concrete-1280.avif",
+        "width": 1280,
+        "format": "avif",
+        "bytes": 336236
+      },
+      {
+        "src": "/images/processed/stock-spreading-concrete-1280.webp",
+        "width": 1280,
+        "format": "webp",
+        "bytes": 384642
+      },
+      {
+        "src": "/images/processed/stock-spreading-concrete-1280.jpg",
+        "width": 1280,
+        "format": "jpg",
+        "bytes": 406439
+      },
+      {
+        "src": "/images/processed/stock-spreading-concrete-1920.avif",
+        "width": 1920,
+        "format": "avif",
+        "bytes": 582296
+      },
+      {
+        "src": "/images/processed/stock-spreading-concrete-1920.webp",
+        "width": 1920,
+        "format": "webp",
+        "bytes": 684046
+      },
+      {
+        "src": "/images/processed/stock-spreading-concrete-1920.jpg",
+        "width": 1920,
+        "format": "jpg",
+        "bytes": 821065
+      }
+    ]
+  }
+}

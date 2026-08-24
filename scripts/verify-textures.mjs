@@ -13,6 +13,11 @@ import path from 'node:path'
 
 const OUT = 'out'
 const TEXTURE_PATHS = ['/images/texture-processed/', '/images/texture/']
+// The paper-grain tile is the sitewide "printed drawing" overlay the texture
+// spec itself mandates as GLOBAL (3–5%). It is paper, not concrete — it
+// cannot read as a photograph of work — so it is the single exemption from
+// the /projects ban. Every photographic texture stays banned there.
+const PROJECTS_EXEMPT = ['drawing-stock-grain']
 
 async function htmlFiles(dir) {
   const files = []
@@ -35,11 +40,18 @@ async function main() {
   for (const file of files) {
     const html = await readFile(file, 'utf8')
     const isProjects = /(^|\/)projects(\.html|\/index\.html)$/.test(file)
-    const hasTexture = TEXTURE_PATHS.some((t) => html.includes(t))
-
-    if (isProjects && hasTexture) {
-      console.error(`[verify-textures] FAIL: texture asset rendered on ${file} — forbidden.`)
-      failed = true
+    if (isProjects) {
+      // Every texture URL on /projects must be in the exempt list.
+      const urls = [...html.matchAll(/\/images\/texture(?:-processed)?\/([a-z0-9-]+)[.-]/g)].map(
+        (m) => m[1]
+      )
+      const offending = urls.filter((u) => !PROJECTS_EXEMPT.some((e) => u.startsWith(e)))
+      if (offending.length > 0) {
+        console.error(
+          `[verify-textures] FAIL: texture asset(s) rendered on ${file} — forbidden: ${[...new Set(offending)].join(', ')}`
+        )
+        failed = true
+      }
     }
 
     // Every texture <img> must be decorative: alt="" and aria-hidden.

@@ -7,7 +7,9 @@ const nextConfig = {
   // and served as static files via the <Picture> component. next/image's
   // per-request optimizer is disabled on purpose (it bills per transformation).
   images: { unoptimized: true },
-  trailingSlash: false,
+  // true → every route exports as route/index.html, which resolves on ANY
+  // static host (extensionless .html files 404 on plain file servers).
+  trailingSlash: true,
 }
 
 export default nextConfig

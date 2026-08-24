@@ -22,6 +22,20 @@ type RevealCallback = () => void
 let sharedObserver: IntersectionObserver | null = null
 const callbacks = new WeakMap<Element, RevealCallback>()
 
+/**
+ * Register a one-shot intersection callback on the SHARED observer.
+ * Used by Reveal and CountUp so the page never has more than one observer.
+ */
+export function observeOnce(el: Element, cb: RevealCallback): () => void {
+  const observer = getObserver()
+  callbacks.set(el, cb)
+  observer.observe(el)
+  return () => {
+    callbacks.delete(el)
+    observer.unobserve(el)
+  }
+}
+
 function getObserver(): IntersectionObserver {
   if (!sharedObserver) {
     sharedObserver = new IntersectionObserver(
@@ -54,15 +68,7 @@ export default function Reveal({ children, delay = 0, className = '', as = 'div'
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    // Already in view on mount (e.g. above the fold after a reload mid-page):
-    // reveal immediately rather than waiting for a scroll.
-    const observer = getObserver()
-    callbacks.set(el, () => el.classList.add('is-revealed'))
-    observer.observe(el)
-    return () => {
-      callbacks.delete(el)
-      observer.unobserve(el)
-    }
+    return observeOnce(el, () => el.classList.add('is-revealed'))
   }, [])
 
   const Tag = as
