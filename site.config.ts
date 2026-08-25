@@ -186,7 +186,7 @@ export const site = {
         category: 'residential',
       },
       {
-        scope: 'Inground pool demolition and site restoration',
+        scope: 'Inground pool demolition',
         location: '8384 Fenton Rd',
         city: 'Grand Blanc',
         year: 2019,
@@ -420,7 +420,7 @@ export const site = {
       {
         name: 'Grand Blanc',
         blurb:
-          'Site of permitted inground pool demolition and site restoration on Fenton Rd (2019).',
+          'Site of a permitted inground pool demolition on Fenton Rd (2019).',
       },
       { name: 'Swartz Creek' },
       { name: 'Clio' },
@@ -608,7 +608,7 @@ export const site = {
       h1: 'Municipal, transit, and school district concrete',
       recordHeading: 'The public record',
       recordSub:
-        'These are permitted, completed projects from Genesee County building filings: locations, scope as written on the permit, and year. This is the evidence a facilities director actually wants.',
+        'These are permitted projects from Genesee County building filings: locations, scope as written on the permit, and year. This is the evidence a facilities director actually wants.',
       expectations: [
         {
           title: 'Working around the public',
@@ -642,7 +642,7 @@ export const site = {
         'Permitted concrete projects across Flint, Burton, and Grand Blanc: transit shelters, foundations, and site work from Genesee County building filings.',
       h1: 'The project record',
       intro:
-        'Every entry below is a permitted, completed project from Genesee County building filings: the location, the scope as written on the permit, and the year. We would rather show you the public record than tell you a story.',
+        'Every entry below is a permitted project from Genesee County building filings: the location, the scope as written on the permit, and the year. We would rather show you the public record than tell you a story.',
       photoNote:
         'Photography of our own completed work is coming. Until then, this page stays photo-free on purpose: the permit record above is verified public history, and we will not dress it up with pictures of someone else\'s concrete.',
       galleryHeading: 'From our job sites',
