@@ -18,12 +18,27 @@
 
 export type ProjectCategory = 'municipal' | 'commercial' | 'residential'
 
+/** Expanded detail for a project (client-provided project sheets). */
+export interface ProjectDetails {
+  owner: string
+  location: string
+  timeframe: string
+  scope: string
+  highlights: readonly string[]
+  siteConditions?: string
+}
+
 export interface ProjectRecord {
   scope: string
   location: string
   city: string
+  /** Numeric year for sorting. Multi-year projects use the end year. */
   year: number
+  /** Display override for multi-year timeframes (e.g. "2024-26"). */
+  yearLabel?: string
   category: ProjectCategory
+  /** Present = the row is expandable and shows the full project sheet. */
+  details?: ProjectDetails
 }
 
 export interface FaqItem {
@@ -85,8 +100,8 @@ export const site = {
     category: 'Concrete Contractor',
     foundingDate: '2002-09-23',
     phone: {
-      display: '(810) 397-5000',
-      e164: '+18103975000',
+      display: '(810) 493-3521',
+      e164: '+18104933521',
     },
     /**
      * Street address — UNCONFIRMED whether the client wants it public
@@ -155,14 +170,238 @@ export const site = {
 
   cta: {
     primary: { label: 'Request a Quote', href: '/contact' },
-    call: { label: 'Call (810) 397-5000' },
+    call: { label: 'Call (810) 493-3521' },
   },
 
   // -------------------------------------------------------------------------
   // Project record (public record — Genesee County building permit filings)
   // -------------------------------------------------------------------------
   projects: {
-    sourceNote: 'Project record from Genesee County building permit filings.',
+    sourceNote:
+      'Permit entries from Genesee County building permit filings. Detailed project descriptions provided by Better 2 Enterprises.',
+    /**
+     * Completed public works — client-provided project sheets (Sept 2026 PDF
+     * from Steve). These carry full details and render as expandable rows.
+     */
+    publicWorks: [
+      {
+        scope: 'Campus sidewalk, curb, and stair concrete program',
+        location: 'Mott Community College',
+        city: 'Flint',
+        year: 2026,
+        category: 'municipal',
+        details: {
+          owner: 'Mott Community College',
+          location: 'Main campus, 1401 E Court St, Flint, MI 48503',
+          timeframe: 'May to August 2026',
+          scope:
+            'Concrete sidewalk, curb, pad, curb ramp openings, concrete stairs, and trip-hazard replacement and repair for ADA and campus safety before fall semester.',
+          siteConditions: 'One-lane closure of Court Street required to complete the work.',
+          highlights: [
+            'Saw-cut, remove, and replace damaged sidewalks, curbs, pads, curb ramp openings, and walk-up steps',
+            'Pour 5-inch, 4000 psi air-entrained concrete sidewalk on compacted aggregate with welded-wire reinforcement',
+            'Repair MDOT-style concrete curb with reinforcing bars',
+            'Finish with medium broom and tooled edges',
+            'Correct trip hazards and restore damaged landscaping',
+            'Barricade completed work on an occupied campus',
+            'Maintain one-lane traffic control on Court Street during adjacent concrete work',
+          ],
+        },
+      },
+      {
+        scope: 'City Hall sidewalk replacement, 5,625 square feet',
+        location: 'Flint City Hall',
+        city: 'Flint',
+        year: 2026,
+        category: 'municipal',
+        details: {
+          owner: 'City of Flint',
+          location: 'Flint City Hall, 1101 S Saginaw St, Flint, MI 48502',
+          timeframe: '2026',
+          scope:
+            'Remove and replace 5,625 square feet of deteriorated sidewalk at City Hall, including the "Back Forty" area behind Police and Fire.',
+          highlights: [
+            'Saw-cut and remove marked sidewalk squares',
+            'Prepare grade and compact 23A sub-base',
+            'Pour new 6-inch concrete sidewalk at the Back Forty',
+            'Install expansion and control joints',
+            'Broom-finish and edge the new walks',
+            'Backfill, place topsoil, seed, fertilize, and restore lawn',
+          ],
+        },
+      },
+      {
+        scope: 'Citywide seasonal speed hump program, about 175 units',
+        location: 'Local streets',
+        city: 'Flint',
+        year: 2026,
+        yearLabel: '2024-26',
+        category: 'municipal',
+        details: {
+          owner: 'City of Flint, Department of Public Works',
+          location: 'Local streets across the City of Flint, MI',
+          timeframe: 'April through November, 2024 to 2026',
+          scope:
+            'Seasonal installation, maintenance, and removal of approximately 175 curb-to-curb speed humps on local roads.',
+          highlights: [
+            'Pick up city-owned speed hump sections from the city yard',
+            'Install humps curb to curb with end caps, mid-sections, and lag bolts',
+            'Set city-provided signs and posts where required',
+            'Maintain units during the season, including loose bolts and service calls',
+            'Remove humps in November and return them to the city yard',
+          ],
+        },
+      },
+      {
+        scope: 'Campus flatwork at three Mott campuses',
+        location: 'Mott Community College',
+        city: 'Flint, Fenton, Lapeer',
+        year: 2025,
+        category: 'municipal',
+        details: {
+          owner: 'Mott Community College',
+          location:
+            'Main campus, 1401 E Court St, Flint, MI; Southern Lakes Branch Center, Fenton, MI; Lapeer Extension Center, Lapeer, MI',
+          timeframe: 'May to September 2025',
+          scope:
+            'Concrete sidewalk, curb, pad, curb ramp openings, concrete stairs, and trip-hazard replacement and repair at Mott campuses in Flint, Fenton, and Lapeer.',
+          highlights: [
+            'Remove and replace sidewalk flags, pads and slabs, curbs, curb ramp openings, concrete stairs, and walk-up steps',
+            'Pour 5-inch, 4000 psi air-entrained concrete sidewalk on compacted aggregate with welded-wire reinforcement',
+            'Repair MDOT-style concrete curb with reinforcing bars',
+            'Correct trip hazards',
+            'Restore damaged landscaping and barricade completed work on an occupied campus',
+          ],
+        },
+      },
+      {
+        scope: 'Clubhouse basement moisture control and building repairs',
+        location: 'Mott Park Clubhouse',
+        city: 'Flint',
+        year: 2025,
+        category: 'municipal',
+        details: {
+          owner: 'City of Flint',
+          location: 'Mott Park Clubhouse, 2401 Nolen Dr, Flint, MI 48504',
+          timeframe: '2025',
+          scope:
+            'Basement moisture control, mold remediation, ceiling and patio sealing, and mini-split installation at the Mott Park Clubhouse.',
+          highlights: [
+            'Inspect basement walls for cracks and water penetration',
+            'Inspect and treat steel beams',
+            'Repair cracks and holes in the ceiling',
+            'Apply water-resistant sealant at the patio',
+            'Install drip edge and flashing around the patio',
+            'Inspect for mold, clean affected areas, and apply anti-mold, moisture-resistant paint',
+            'Install an average of 4 inches of spray foam on the steel-deck ceiling',
+            'Install a mini-split with required piping and electrical',
+          ],
+        },
+      },
+      {
+        scope: "20' x 20' building addition and interior improvements",
+        location: 'Krapohl Senior Center',
+        city: 'Mount Morris',
+        year: 2025,
+        category: 'municipal',
+        details: {
+          owner: 'Charter Township of Mount Morris',
+          location: 'Krapohl Senior Center, G-5447 Bicentennial Dr, Mount Morris, MI 48458',
+          timeframe: 'June to December 2025',
+          scope:
+            "20' x 20' storage addition and interior and HVAC improvements at the senior center.",
+          highlights: [
+            "Build a 20' x 20' addition on the east side, including footings, concrete floor, entry, drywall, paint, electrical, heating, and lighting",
+            'Install new ceiling tiles throughout the center, paint metal grids, and replace light covers',
+            'Reconnect HVAC and install foam insulation at the rear office exterior walls',
+            'Complete required site restoration and soil-erosion controls',
+          ],
+        },
+      },
+      {
+        scope: '50/50 residential sidewalk replacement program',
+        location: 'Residential streets',
+        city: 'Flint',
+        year: 2025,
+        yearLabel: '2024-25',
+        category: 'municipal',
+        details: {
+          owner: 'City of Flint',
+          location: 'Residential sidewalks across the City of Flint, MI',
+          timeframe: '2024 to 2025 construction seasons',
+          scope:
+            'Remove and replace residential concrete sidewalk under the City of Flint 50/50 program.',
+          highlights: [
+            'Remove failed sidewalk squares at participating residential properties',
+            'Form, pour, and finish new 4-inch and 6-inch concrete sidewalk',
+            'Install ADA ramps where required',
+            'Replace sidewalk around trees where specified',
+            'Restore work areas and leave squares ready for City inspection',
+          ],
+        },
+      },
+      {
+        scope: 'Loading dock wall, dumpster pad, and stair reconstruction',
+        location: 'Clio Area High School',
+        city: 'Clio',
+        year: 2024,
+        category: 'municipal',
+        details: {
+          owner: 'Clio Area Schools',
+          location: 'Clio Area High School, 1 Mustang Dr, Clio, MI 48420',
+          timeframe: 'June 14 to 30, 2024',
+          scope: 'Loading dock wall, dumpster pad, and interior stair reconstruction.',
+          highlights: [
+            'Demolition of existing paving, brick wall, stairs, and concrete wall at the dock',
+            'New 12-inch-thick, 6-foot-tall reinforced concrete dock wall tied to the existing footing',
+            'Form and pour reinforced concrete stairs to the existing profile',
+            'New embed angle at the dock edge',
+            "New 10' x 10' x 8-inch reinforced dumpster pad",
+            'Remove and replace concrete in metal pan stairs and replace stair pans',
+          ],
+        },
+      },
+      {
+        scope: 'District-wide concrete sidewalk replacement',
+        location: 'District school sites',
+        city: 'Yale',
+        year: 2024,
+        category: 'municipal',
+        details: {
+          owner: 'Yale Public Schools',
+          location: 'Multiple school sites, Yale Public Schools, Yale, MI',
+          timeframe: 'Summer 2024',
+          scope:
+            'Remove and replace approximately 1,851 square feet of concrete sidewalk at marked locations at district schools.',
+          highlights: [
+            'Remove existing marked sidewalk slabs',
+            'Prepare base and haul off earth and debris',
+            'Pour 6-inch concrete sidewalk reinforced with rebar and tied into existing walks',
+            'Reseed and restore disturbed areas',
+          ],
+        },
+      },
+      {
+        scope: 'Water treatment plant concrete repairs',
+        location: 'Midland Water Treatment Plant',
+        city: 'Midland',
+        year: 2023,
+        category: 'municipal',
+        details: {
+          owner: 'City of Midland',
+          location: 'Midland Water Treatment Plant, 2125 Austin St, Midland, MI',
+          timeframe: '2023',
+          scope:
+            'Exterior concrete repair and replacement at three locations: culvert headwall, east and west stairs, and outfall wing walls.',
+          highlights: [
+            'Saw-cut, demo, and replace the damaged culvert headwall; drill and epoxy #4 rebar; backfill with compacted MDOT Class II sand and restore slopes',
+            'Repair east and west exterior stairs: replace abutment wall, patch spalls, add expansion joint, reinforce with epoxied #4 rebar, and refinish the existing handrail',
+            'Remove timber outfall barrier walls and pour new frost-depth footings and cast-in-place concrete wing walls with rebar, expansion joints, and waterproofing',
+            'Dispose of rubble and restore disturbed areas with topsoil, seed, and mulch',
+          ],
+        },
+      },
+    ] satisfies ProjectRecord[],
     records: [
       {
         scope: 'Concrete pad, sidewalk, and glass transit shelter',
@@ -215,7 +454,8 @@ export const site = {
       },
     ] satisfies ProjectRecord[],
     categoryLabels: {
-      municipal: 'Municipal',
+      // "Public" covers cities, townships, school districts, and colleges.
+      municipal: 'Public',
       commercial: 'Commercial',
       residential: 'Residential',
     } as Record<ProjectCategory, string>,
@@ -282,6 +522,11 @@ export const site = {
             'Concrete paving, aprons, and repairs for lots that need to stay open while work happens.',
         },
         {
+          name: 'Catch basin repair',
+          description:
+            'Rebuilding and repairing the catch basins and storm drains that collect runoff from parking lots and drives, so water goes where it should instead of undermining the pavement around it.',
+        },
+        {
           name: 'Demolition and removal',
           description:
             'Tear-out and haul-away of failed concrete, with the subgrade prepped right before anything new goes down.',
@@ -318,6 +563,11 @@ export const site = {
           name: 'Public building approaches and walkways',
           description:
             'Entrance slabs, steps, and walkways for public facilities, built with pedestrian safety fencing and clear detours.',
+        },
+        {
+          name: 'Catch basin and storm drain repair',
+          description:
+            'Repairing and rebuilding the catch basins that street and lot drainage flows into, from the structure itself to the surrounding collar and pavement.',
         },
       ] satisfies ServiceItem[],
     },
@@ -400,6 +650,21 @@ export const site = {
   serviceArea: {
     region: 'Genesee County, Michigan',
     /**
+     * Travel radius (client-stated Sept 2026): they will take jobs up to about
+     * a 1.5 hour drive from Montrose. Backed by completed work in Midland
+     * (2023) and Yale (2024). Drives the map on /service-areas.
+     */
+    travel: {
+      heading: 'How far we go',
+      note: 'Better 2 Enterprises is based in Montrose and takes jobs up to about an hour and a half out. That range reaches Saginaw, Bay City, Midland, Lapeer, Port Huron, Lansing, and the north side of Metro Detroit, and it is not theoretical: the project record includes completed work in Midland and Yale.',
+      mapLabel: 'Based in Montrose, MI',
+      radiusLabel: 'About a 1.5 hour drive',
+      /** Montrose, MI town center — deliberately NOT the street address. */
+      mapCenter: { lat: 43.1767, lng: -83.8925 },
+      /** ~1.5 h drive at mixed highway speeds. */
+      radiusMiles: 90,
+    },
+    /**
      * Blurbs exist ONLY where the permit record or verified facts support a
      * true, specific claim (Flint, Burton, Grand Blanc = permitted work;
      * Montrose = verified home base). Every other city is served, listed
@@ -448,7 +713,7 @@ export const site = {
       {
         question: 'What areas do you cover?',
         answer:
-          'We work across Genesee County: Flint, Flushing, Burton, Grand Blanc, Swartz Creek, Clio, Davison, and our home base of Montrose, plus nearby communities like Chesaning, Birch Run, Owosso, and Frankenmuth. If you are close to that area, call and ask.',
+          'Our core area is Genesee County: Flint, Flushing, Burton, Grand Blanc, Swartz Creek, Clio, Davison, and our home base of Montrose. For the right job we travel up to about an hour and a half from Montrose, and we have completed projects as far out as Midland and Yale. If you are anywhere in that range, call and ask.',
       },
       {
         question: 'Do you work with school districts and municipalities?',
@@ -468,7 +733,7 @@ export const site = {
       {
         question: 'How do I get a quote?',
         answer:
-          'Call (810) 397-5000 or send the quote form on the contact page. Tell us where the job is and roughly what you need, and we will take it from there.',
+          'Call (810) 493-3521 or send the quote form on the contact page. Tell us where the job is and roughly what you need, and we will take it from there.',
       },
     ] satisfies FaqItem[],
     commercial: [
@@ -497,7 +762,7 @@ export const site = {
       {
         question: 'What public work have you actually done?',
         answer:
-          'Our Genesee County permit record includes concrete pads, slabs, and sidewalks for transit shelters across Flint, on Flushing Rd, Miller Rd, S Linden Rd, W Bristol Rd, and Mallery St, filed between 2018 and 2021. The full record is on this page and on the projects page.',
+          'Recent public work includes campus concrete programs for Mott Community College, sidewalk replacement at Flint City Hall and under the City of Flint 50/50 program, loading dock and stair reconstruction for Clio Area Schools, a building addition for Mount Morris Township, sidewalk replacement for Yale Public Schools, and concrete repairs at the Midland Water Treatment Plant. Our Genesee County permit record adds transit shelter pads, slabs, and sidewalks across Flint filed between 2018 and 2021. The full record is on this page. Click any project to see the details.',
       },
       {
         question: 'Can you work while a building is occupied?',
@@ -512,7 +777,7 @@ export const site = {
       {
         question: 'How do we get you on a bid list?',
         answer:
-          'Call (810) 397-5000 or use the contact form and tell us about the project. We can talk through scope, timeline, and documentation from there.',
+          'Call (810) 493-3521 or use the contact form and tell us about the project. We can talk through scope, timeline, and documentation from there.',
       },
     ] satisfies FaqItem[],
     residential: [
@@ -567,18 +832,18 @@ export const site = {
         heading: 'The short version',
         yearsLabel: 'Years in business',
         bbbLabel: 'BBB rating, accredited since 2018',
-        permitsLabel: 'Projects on the public permit record',
+        permitsLabel: 'Documented projects on record',
       },
       faqHeading: 'Common questions',
       finalCta: {
         heading: 'Tell us about the job',
-        body: 'Call (810) 397-5000 or send the form. Whether it is a bus shelter pad or a backyard patio, it starts with a conversation.',
+        body: 'Call (810) 493-3521 or send the form. Whether it is a bus shelter pad or a backyard patio, it starts with a conversation.',
       },
     },
     commercial: {
       title: 'Commercial Concrete in Genesee County | Better 2 Enterprises',
       description:
-        'Commercial flatwork, sidewalks, curb and gutter, ADA ramps, and site concrete for GCs and property managers across Genesee County, MI. Call (810) 397-5000.',
+        'Commercial flatwork, sidewalks, curb and gutter, ADA ramps, and site concrete for GCs and property managers across Genesee County, MI. Call (810) 493-3521.',
       h1: 'Commercial concrete, scheduled around your operation',
       forWho:
         'For general contractors who need a concrete sub that hits dates, and for property managers and owners who need work done around an open business.',
@@ -604,11 +869,11 @@ export const site = {
     municipal: {
       title: 'Municipal & School Concrete in Flint, MI | Better 2 Enterprises',
       description:
-        'Transit shelter pads, municipal sidewalks, ADA upgrades, and school district concrete across Genesee County. Public permit record included. Call (810) 397-5000.',
+        'Transit shelter pads, municipal sidewalks, ADA upgrades, and school district concrete across Genesee County. Public permit record included. Call (810) 493-3521.',
       h1: 'Municipal, transit, and school district concrete',
       recordHeading: 'The public record',
       recordSub:
-        'These are permitted projects from Genesee County building filings: locations, scope as written on the permit, and year. This is the evidence a facilities director actually wants.',
+        'Completed public works with full project sheets, plus permitted projects from Genesee County building filings. Click a project to see the owner, timeframe, and exactly what the work included. This is the evidence a facilities director actually wants.',
       expectations: [
         {
           title: 'Working around the public',
@@ -631,7 +896,7 @@ export const site = {
     residential: {
       title: 'Driveways & Patios in Genesee County | Better 2 Enterprises',
       description:
-        'Driveway replacement, patios, garage floors, and walkways for Genesee County homeowners. Tear-out included, written quotes, honest timelines. (810) 397-5000.',
+        'Driveway replacement, patios, garage floors, and walkways for Genesee County homeowners. Tear-out included, written quotes, honest timelines. (810) 493-3521.',
       h1: 'Driveways, patios, and garage floors',
       processHeading: 'How the job runs',
       processSub: 'From first call to finished slab: what actually happens, in order.',
@@ -642,7 +907,7 @@ export const site = {
         'Permitted concrete projects across Flint, Burton, and Grand Blanc: transit shelters, foundations, and site work from Genesee County building filings.',
       h1: 'The project record',
       intro:
-        'Every entry below is a permitted project from Genesee County building filings: the location, the scope as written on the permit, and the year. We would rather show you the public record than tell you a story.',
+        'Completed public works projects for cities, townships, schools, and colleges, plus permitted projects from Genesee County building filings. Click any project with an arrow to see the owner, the timeframe, and exactly what the work included. We would rather show you the record than tell you a story.',
       photoNote:
         'Photography of our own completed work is coming. Until then, this page stays photo-free on purpose: the permit record above is verified public history, and we will not dress it up with pictures of someone else\'s concrete.',
       galleryHeading: 'From our job sites',
@@ -665,15 +930,15 @@ export const site = {
         'Concrete contractor serving Flint, Flushing, Burton, Grand Blanc, Swartz Creek, Clio, Davison, Montrose, and surrounding Genesee County communities.',
       h1: 'Where we work',
       intro:
-        'Better 2 Enterprises works out of Montrose and covers Genesee County, with the heaviest concentration of our permitted work in and around Flint. We also take jobs in nearby communities just outside the county.',
+        'Better 2 Enterprises works out of Montrose and covers Genesee County, with the heaviest concentration of our work in and around Flint. For the right job we travel up to about an hour and a half out, and the record backs it: completed projects reach Midland to the northwest and Yale to the east.',
     },
     contact: {
       title: 'Get a Concrete Quote | Better 2 Enterprises',
       description:
-        'Request a quote from Better 2 Enterprises: commercial, municipal, and residential concrete across Genesee County, MI. Call (810) 397-5000 or send the form.',
+        'Request a quote from Better 2 Enterprises: commercial, municipal, and residential concrete across Genesee County, MI. Call (810) 493-3521 or send the form.',
       h1: 'Tell us about the job',
       intro:
-        'Call (810) 397-5000 or send the form below. Give us the location and a rough idea of the work, and we will take it from there.',
+        'Call (810) 493-3521 or send the form below. Give us the location and a rough idea of the work, and we will take it from there.',
       formHeading: 'Request a quote',
       phoneHeading: 'Prefer to talk?',
     },
@@ -686,7 +951,7 @@ export const site = {
     home_meta: {
       title: 'Concrete Contractor in Genesee County | Better 2 Enterprises',
       description:
-        'Commercial, municipal, and residential concrete across Flint and Genesee County, MI. Family-run since 2002, BBB A+ accredited. Call (810) 397-5000.',
+        'Commercial, municipal, and residential concrete across Flint and Genesee County, MI. Family-run since 2002, BBB A+ accredited. Call (810) 493-3521.',
     },
   },
 
@@ -755,7 +1020,7 @@ export const site = {
       },
       {
         heading: 'Questions',
-        body: 'If you want to know what information we have about you or want it removed, call us at (810) 397-5000.',
+        body: 'If you want to know what information we have about you or want it removed, call us at (810) 493-3521.',
       },
     ],
   },

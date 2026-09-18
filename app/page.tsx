@@ -119,7 +119,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={160}>
             <p className="font-display text-6xl font-extrabold text-chalk md:text-7xl">
-              <CountUp value={site.projects.records.length} />
+              <CountUp value={site.projects.records.length + site.projects.publicWorks.length} />
             </p>
             <p className="station mt-3 !text-ink">{home.trust.permitsLabel}</p>
           </Reveal>

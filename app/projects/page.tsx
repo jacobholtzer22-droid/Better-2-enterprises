@@ -24,7 +24,7 @@ export default function ProjectsPage() {
     <>
       <PageHeader station="Public record" h1={page.h1} lead={page.intro} />
 
-      <Section station="Permit record · Genesee County" stationNumber="01" tone="form">
+      <Section station="Project record" stationNumber="01" tone="form">
         <ProjectTable />
         <p className="mt-10 max-w-2xl border-l-2 border-chalk pl-5 text-aggregate">
           {page.photoNote}

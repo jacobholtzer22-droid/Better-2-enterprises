@@ -83,7 +83,7 @@ export default function ResidentialConcretePage() {
 
       <CtaBand
         heading="Get a real number for your driveway"
-        body="Call (810) 397-5000 or send the form. Tell us where the job is and what you want done, and we will quote it from the actual site."
+        body="Call (810) 493-3521 or send the form. Tell us where the job is and what you want done, and we will quote it from the actual site."
       />
     </>
   )

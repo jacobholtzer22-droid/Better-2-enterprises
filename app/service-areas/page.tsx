@@ -5,6 +5,7 @@ import Section from '@/components/Section'
 import Reveal from '@/components/Reveal'
 import Picture from '@/components/Picture'
 import CtaBand from '@/components/CtaBand'
+import ServiceAreaMap from '@/components/ServiceAreaMap'
 
 const page = site.pages.serviceAreas
 
@@ -57,6 +58,19 @@ export default function ServiceAreasPage() {
         </ul>
       </Section>
 
+      {/* Travel radius map — client-stated 1.5h range, backed by Midland + Yale projects */}
+      <Section station={site.serviceArea.travel.heading} stationNumber="02">
+        <h2 className="font-display text-3xl font-bold uppercase md:text-4xl">
+          {site.serviceArea.travel.heading}
+        </h2>
+        <p className="mt-4 max-w-2xl leading-relaxed text-aggregate">
+          {site.serviceArea.travel.note}
+        </p>
+        <div className="mt-8">
+          <ServiceAreaMap />
+        </div>
+      </Section>
+
       <div className="joint-rule relative max-h-[380px] overflow-hidden">
         <Picture
           name={site.images.serviceAreasBand.name}
@@ -68,7 +82,7 @@ export default function ServiceAreasPage() {
 
       <CtaBand
         heading="Close to the area? Call and ask."
-        body="If your job is near Genesee County, there is a good chance we cover it. Call (810) 397-5000 and tell us where you are."
+        body="If your job is near Genesee County, there is a good chance we cover it. Call (810) 493-3521 and tell us where you are."
       />
     </>
   )

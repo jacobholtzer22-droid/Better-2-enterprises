@@ -72,7 +72,7 @@ export default function MunicipalPage() {
 
       <CtaBand
         heading="Put us on your bid list"
-        body="Call (810) 397-5000 or send the form and tell us about the project. Scope, timeline, and documentation from there."
+        body="Call (810) 493-3521 or send the form and tell us about the project. Scope, timeline, and documentation from there."
       />
     </>
   )
