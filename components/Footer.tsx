@@ -40,6 +40,16 @@ export default function Footer() {
                   </li>
                 )
               )}
+              <li>
+                <a
+                  href="#"
+                  data-aa-cookie-settings
+                  hidden
+                  className="text-sm text-slab/85 underline-offset-4 transition-opacity duration-150 hover:underline hover:opacity-80"
+                >
+                  Cookie settings
+                </a>
+              </li>
             </ul>
           </nav>
 

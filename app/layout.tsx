@@ -39,6 +39,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
+      <head>
+        <script defer src="https://www.alignandacquire.com/t/s/better-2-enterprises.js"></script>
+      </head>
       <body className="bg-slab font-body text-ink antialiased">
         <a
           href="#main"

@@ -1019,6 +1019,10 @@ export const site = {
         body: 'Form submissions are processed and stored by Align and Acquire, the company that operates this website on our behalf, and are used only to deliver your request to us.',
       },
       {
+        heading: 'Cookies and analytics',
+        body: 'We count visits to this site without cookies: we log the page viewed, the site that linked here, ad campaign tags and an approximate location (country, region and city), and we never store your IP address. If you click OK on the cookie banner, we also use PostHog to record how you use this site (clicks, scrolling and a replay of your visit, with anything you type hidden); you can change your choice at any time with the Cookie settings link at the bottom of every page, and if your browser sends a Global Privacy Control signal we leave this off.',
+      },
+      {
         heading: 'Questions',
         body: 'If you want to know what information we have about you or want it removed, call us at (810) 493-3521.',
       },
